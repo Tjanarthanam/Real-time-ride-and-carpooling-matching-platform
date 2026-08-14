@@ -1,0 +1,33 @@
+# Node
+node_modules/
+frontend/node_modules/
+
+# React build
+frontend/dist/
+frontend/build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Java / Maven
+backend/target/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Java
+*.class
+
+# Temporary files
+*.tmp

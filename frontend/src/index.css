@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   DARK MODE
+   Implemented as a global filter-invert overlay (toggled by adding/removing
+   `dark-mode` on <html>, see components/ThemeToggle.jsx) rather than adding
+   Tailwind dark: variants to every existing page. This means every existing
+   page keeps its exact current light-mode markup/classes untouched, while
+   still getting a working, readable dark theme app-wide.
+   ========================================================================== */
+html.dark-mode {
+  filter: invert(1) hue-rotate(180deg);
+  background: #fff;
+}
+
+/* Re-invert media so photos/logos/icons-as-images don't look like photo negatives */
+html.dark-mode img,
+html.dark-mode video,
+html.dark-mode iframe,
+html.dark-mode svg image {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark-mode {
+  transition: filter 0.2s ease;
+}
+
